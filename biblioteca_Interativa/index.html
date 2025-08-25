@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Interativa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📚 Biblioteca Interativa</h1>
+    <nav>
+      <button onclick="showSection('searchTitle')">Buscar por Título/Autor</button>
+      <button onclick="showSection('searchSubject')">Livros por Gênero</button>
+      <button onclick="showSection('coverGallery')">Galeria de Capas</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="searchTitle" class="content-section">
+      <h2>Buscar por Título ou Autor</h2>
+      <input type="text" id="titleInput" placeholder="Digite título ou autor...">
+      <button onclick="searchByTitle()">Buscar</button>
+      <div id="titleResults"></div>
+    </section>
+
+    <section id="searchSubject" class="content-section" style="display:none;">
+      <h2>Livros por Assunto</h2>
+      <input type="text" id="subjectInput" placeholder="Digite o Gênero...">
+      <button onclick="searchBySubject()">Buscar</button>
+      <div id="subjectResults"></div>
+    </section>
+
+    <section id="coverGallery" class="content-section" style="display:none;">
+      <h2>Galeria de Capas</h2>
+      <input type="text" id="coverInput" placeholder="Digite o título ou autor...">
+      <button onclick="searchCovers()">Buscar</button>
+      <div id="coverResults" class="gallery"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
